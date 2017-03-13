@@ -21,7 +21,7 @@
 $(function() {
   // ［検索］ボタンクリックで郵便番号検索を実行
   $('#search').click(function() {
-    $.getJSON('http://zipcloud.ibsnet.co.jp/api/search?callback=?',
+    $.getJSON('data/sample.json',
       {
         zipcode: $('#zip').val()
       }
