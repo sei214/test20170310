@@ -19,10 +19,13 @@ $(function() {
     $.getJSON("data/sample.json", {}, function(json){
       var htmlStr = "";
       $.each(json, function(i, obj){
-        var a = obj.a;
-        var b = obj.b;
-        htmlStr += "出席番号" + a + "<br>";
-        htmlStr += "名前" + b + "<br>";
+        var list = obj.list;
+        $.each(list, function(j, value){
+          var a = value.a;
+          var b = value.b;
+          htmlStr += "出席番号" + a + "<br>";
+          htmlStr += "名前" + b + "<br>";
+        });
       });
       $("#disp").html(htmlStr);
     });
