@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html ng-app="myApp" lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Angular JSON Get Sample</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script>
+  var app = angular.module('myApp', []);
+
+  app.controller('MainController', ['$scope', '$timeout', '$http', function($scope, $timeout, $http){
+    $timeout(function() {
+    $http.get('data/sample.json')
+      .success(function(data) {
+      $scope.items = data.list;
+    })
+    .error(function(err) {
+      alert('読み込み失敗');
+    });
+  });
+
+  }]);
+  </script>
+</head>
+<body ng-controller="MainController">
+  <ul>
+    <li ng-repeat="value in items">
+    出席番号：{{value.id}}
+    氏名：{{value.name}}
+    </li>
+  </ul>
+</body>
+</html>
