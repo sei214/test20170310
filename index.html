@@ -16,7 +16,7 @@
 $(function() {
   // ［検索］ボタンクリックで郵便番号検索を実行
   $('#search').click(function() {
-    $.getJSON("game.txt", {}, function(json){
+    $.getJSON("data/sample.json", {}, function(json){
       var htmlStr = "";
       $.each(json, function(i, obj){
         var id = obj.id;
