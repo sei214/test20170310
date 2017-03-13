@@ -19,7 +19,7 @@ $(function() {
     $.getJSON("data/sample.json", {}, function(json){
       var htmlStr = "";
       $.each(json, function(i, obj){
-        $.each(obj, function(j, value){
+        $.each(i, function(j, value){
           var a = value.a;
           var b = value.b;
           htmlStr += "出席番号" + a + "<br>";
