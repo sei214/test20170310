@@ -2,23 +2,23 @@
   "list": [
       {
           "id": "001",
-          "name": "山田一郎"
+          "name": "AAA"
       },
       {
           "id": "002",
-          "name": "鈴木次郎"
+          "name": "BBB"
       },
       {
           "id": "003",
-          "name": "岡本三郎"
+          "name": "CCC"
       },
       {
           "id": "004",
-          "name": "浅岡四郎"
+          "name": "DDD"
       },
       {
           "id": "005",
-          "name": "佐藤五郎"
+          "name": "EEE"
       }
   ]
 }
